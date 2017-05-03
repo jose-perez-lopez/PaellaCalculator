@@ -6,7 +6,6 @@ import {Header,People,Ingredient} from './'
 class PaellaCalculator extends Component {
     render() {
         return (
-
             <View style={styles.peopleContainer}>
                 <View style={{flex:1}}>
                     <Header onChangeNumberOfPeople={this.changeNumberOfPeople.bind(this)} />

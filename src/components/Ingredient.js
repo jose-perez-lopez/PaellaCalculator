@@ -4,9 +4,7 @@ import {Text,View,Slider} from 'react-native'
 
 class Ingredient extends Component{
     render(){
-
         return (<Text>{this.props.name}</Text>);
-
     }
 }
 
