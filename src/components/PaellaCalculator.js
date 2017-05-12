@@ -4,39 +4,38 @@ import {Header,People,Ingredient} from './'
 
 
 class PaellaCalculator extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {peopleNumber:0}
+    }
     render() {
         return (
-            <View style={styles.peopleContainer}>
+            <View style={{flex:1}}>
                 <View style={{flex:1}}>
-                    <Header onChangeNumberOfPeople={this.changeNumberOfPeople.bind(this)} />
+                    <Header />
                 </View>
                 <View style={{flex:1}}>
-                    <People min={0} max={50} />
+                    <People min={0} max={50} peopleNumber={this.state.peopleNumber} onChangeNumberOfPeople={this.onChangeNumberOfPeople.bind(this)} />
                 </View>
-                <View style={{flex:3}}>
-                    <Ingredient name='Rice' amout='0' unit='kilos'/>
+                <View style={{flex:2, backgroundColor:"yellow",}}>
+                    <Ingredient name='Rice' amount={this.state.peopleNumber*0.1} unit='kilos' />
                 </View>
-                <View style={{flex:3}}>
-                    <Ingredient name='Water' amout='0' unit='litres'/>
+                <View style={{flex:2, backgroundColor:"red",}}>
+                    <Ingredient name='Water' amount={this.state.peopleNumber*0.14} unit='litres'/>
                 </View>
             </View>
         );
     }
 
-    changeNumberOfPeople = (peopleNumber) => {
-        console.log('XXX',peopleNumber)
+    onChangeNumberOfPeople = (peopleNumber) => {
+        this.setState({peopleNumber:peopleNumber})
     }
 }
 
 
 
 
-const styles = StyleSheet.create({
-    peopleContainer:{
-        flex: 1,
-
-    }
-});
 
 
 export  {PaellaCalculator};

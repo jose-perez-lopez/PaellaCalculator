@@ -1,11 +1,22 @@
 import React,{Component} from 'react';
-import {Text,View} from 'react-native'
+import {Text,View,StyleSheet} from 'react-native'
 
+
+const styles = StyleSheet.create({
+
+    text: {
+        fontSize: 25,
+        textAlign: 'center',
+        fontWeight: '500',
+        marginTop: 30,
+        textAlignVertical:'center'
+    }
+});
 
 class Header extends Component{
     render(){
         return (
-            <Text  style={{ marginTop: 20}} >Paella Calculator</Text>
+            <Text  style={styles.text} >Paella Calculator</Text>
         );
     }
 }
