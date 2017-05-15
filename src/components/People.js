@@ -4,7 +4,8 @@ import {Text,View,Slider,StyleSheet} from 'react-native'
 const styles = StyleSheet.create({
     peopleContainer:{
         backgroundColor:"red",
-        flex:1
+        flex:1,
+
     },
     peopleSlider:{
         flex:1
@@ -18,7 +19,9 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 25,
         textAlign: 'center',
-        textAlignVertical:'center'
+        textAlignVertical:'center',
+        marginHorizontal:20,
+        marginTop:15,
     }
 });
 
@@ -28,10 +31,10 @@ class People extends Component{
         return(
                 <View style={styles.peopleContainer}>
                     <View>
-                         <Text style={styles.text} >People</Text>
+                         <Text style={styles.text} >People {this.props.peopleNumber}</Text>
                     </View>
                     <View style={styles.peopleSliderContainer}>
-                        <Text> {this.props.min}</Text>
+                        <Text style={styles.text}> {this.props.min}</Text>
                         <Slider style={styles.peopleSlider}
                             minimumValue={this.props.min}
                             maximumValue={this.props.max}
@@ -39,10 +42,7 @@ class People extends Component{
                             value={this.props.peopleNumber}
                             onValueChange={this.props.onChangeNumberOfPeople}
                         />
-                        <Text>{this.props.max}</Text>
-                    </View>
-                    <View>
-                        <Text style={styles.text}>{this.props.peopleNumber}</Text>
+                        <Text style={styles.text}>{this.props.max}</Text>
                     </View>
                 </View>
 
