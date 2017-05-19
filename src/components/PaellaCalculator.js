@@ -11,16 +11,15 @@ class PaellaCalculator extends Component {
     render() {
         return (
             <View style={{flex:1}}>
-                <View style={{flex:4}}>
-                    <Header />
+                <View style={{flex:4, backgroundColor:"#AD1519",}}>
+                    <People min={0} max={50} peopleNumber={this.state.peopleNumber}
+                            onChangeNumberOfPeople={this.onChangeNumberOfPeople.bind(this)}
+                    />
                 </View>
-                <View style={{flex:6}}>
-                    <People min={0} max={50} peopleNumber={this.state.peopleNumber} onChangeNumberOfPeople={this.onChangeNumberOfPeople.bind(this)} />
-                </View>
-                <View style={{flex:8, backgroundColor:"yellow",}}>
+                <View style={{flex:8, backgroundColor:"#FABD00",}}>
                     <Ingredient name='Rice' amount={this.state.peopleNumber*0.1} unit='kilos' />
                 </View>
-                <View style={{flex:8, backgroundColor:"red",}}>
+                <View style={{flex:4, backgroundColor:"#AD1519",}}>
                     <Ingredient name='Water' amount={this.state.peopleNumber*0.225} unit='litres'/>
                 </View>
             </View>

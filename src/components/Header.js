@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         fontWeight: '500',
-        marginTop: 30,
+        marginTop: 25,
         textAlignVertical:'center'
     }
 });

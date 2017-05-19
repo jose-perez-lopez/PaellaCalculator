@@ -3,15 +3,14 @@ import {Text,View,Slider,StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     peopleContainer:{
-        backgroundColor:"red",
-        flex:1,
-
+        flex:1
     },
     peopleSlider:{
         flex:1
 
     },
     peopleSliderContainer:{
+
         flex:1,
         flexDirection:'row',
         justifyContent: 'space-between'
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         textAlignVertical:'center',
         marginHorizontal:20,
-        marginTop:15,
+        marginTop:30,
     }
 });
 

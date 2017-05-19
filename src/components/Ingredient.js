@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: '500',
         margin: 10,
+        marginTop: 20,
         textAlignVertical:'center'
     }
 });
