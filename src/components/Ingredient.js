@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Text,View,Slider,StyleSheet} from 'react-native'
 import Numeral from 'numeral'
-
+import {connect} from 'react-redux'
 
 const styles = StyleSheet.create({
 
@@ -17,8 +17,20 @@ const styles = StyleSheet.create({
 
 class Ingredient extends Component{
     render(){
-        return (<Text style={styles.text}>{this.props.name} {Numeral(this.props.amount).format('0,0.00')} {this.props.unit}</Text>);
+        console.log(this.props)
+        return (<Text style={styles.text}>
+                    {this.props.name} {Numeral(this.props.amount).format('0,0.00')}
+                {this.props.unit}</Text>);
     }
+
+
 }
 
+const mapStateToProps = state =>{
+    console.log("++++++")
+    return {xx:state}
+}
+
+//export default connect(mapStateToProps)(Ingredient);
 export {Ingredient};
+export default connect(mapStateToProps)(Ingredient);
